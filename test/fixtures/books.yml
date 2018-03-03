@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  isbn: 978-1-1111-11111-1
+  title: できる！ハーフアップ講座
+  publish: 池田の友社
+  published: 2018-02-04
+  dl: true
+  price: 100
+
+two:
+  isbn: 978-2-2222-22222-1
+  title: はじめての黒霧島
+  publish: 内野印刷
+  published: 2018-02-04
+  dl: false
+  price: 120

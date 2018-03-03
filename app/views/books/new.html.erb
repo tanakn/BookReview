@@ -1,0 +1,26 @@
+<h1>新規登録</h1>
+<p>Find me in app/views/books/new.html.erb</p>
+<%= form_for @book do |f| %>
+<div class="field">
+	<%= f.label :isbn %> <br>
+	<%= f.text_field :isbn %>
+</div>
+<div class="field">
+	<%= f.label :title %> <br>
+	<%= f.text_field :title %>
+</div>
+<div class="field">
+	<%= f.label :price %> <br>
+	<%= f.number_field :price %>
+</div>
+<div class="field">
+	<%= f.label :published %> <br>
+	<%= f.date_field :published %>
+</div>
+<div class="field">
+	<%= f.label :publish %> <br>
+	<%= f.text_field :publish %>
+</div>
+
+<%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<% end %>

@@ -1,0 +1,9 @@
+<div><%= book.isbn %></div>
+<div><%= book.title %></div>
+<div><%= book.price %></div>
+<div><%= link_to "詳細", book %></div>
+<div><%= link_to "更新", edit_book_path(book.id) %></div>
+<div><%= link_to "削除", book, method: :delete, data: { confirm: '後悔しませんか'} %></div>
+<br>
+<br>
+
