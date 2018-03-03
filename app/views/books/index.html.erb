@@ -2,7 +2,7 @@
 <p>Find me in app/views/books/index.html.erb</p>
 <div id= 'book_list'>
 	<p>田中のブックスのインデックス</p>
-<%= render @books %>
+<%= render @books, type: :simple %>
 </div>
 
 <%= link_to "新規登録", new_book_path %>

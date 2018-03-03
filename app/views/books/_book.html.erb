@@ -1,9 +1,22 @@
-<div><%= book.isbn %></div>
-<div><%= book.title %></div>
-<div><%= book.price %></div>
-<div><%= link_to "詳細", book %></div>
-<div><%= link_to "更新", edit_book_path(book.id) %></div>
-<div><%= link_to "削除", book, method: :delete, data: { confirm: '後悔しませんか'} %></div>
-<br>
+<div class="book">
+	<div>タイトル:<%= book.title %></div>
+	<div class ="book-detail" style ="display: none;">
+		<div>ISBN:<%= book.isbn %></div>
+		<div>値段:<%= book.price %></div>
+		<%= type = :details if type.nil? %>
+		<% if type == :details %>
+				<% if !book.reviews.blank? %>
+					<div>レビュー</div>
+					<% for review in book.reviews %>
+						<div><%= review.body %></div>
+					<% end %>
+				<% end %>
+		<% else %>
+			<div><%= link_to "詳細", book %></div>
+		<% end %>	
+		<div><%= link_to "更新", edit_book_path(book.id) %></div>
+		<div><%= link_to "削除", book, method: :delete, data: { confirm: '後悔しませんか'} %></div>
+	</div>
+</div>
 <br>
 
